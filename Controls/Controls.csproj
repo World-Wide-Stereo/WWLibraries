@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26686BB4-D7F5-4273-B036-4428BA3A2569}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Controls</RootNamespace>
+    <AssemblyName>Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSpell.SpellChecker">
+      <HintPath>..\Library\NetSpell.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="RicherTextBox">
+      <HintPath>..\Library\RicherTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxOfCheckBoxes\ComboBoxOfCheckBoxes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboBoxOfCheckBoxes\ComboBoxOfCheckBoxes.Designer.cs">
+      <DependentUpon>ComboBoxOfCheckBoxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxOfCheckBoxes\GripBounds.cs" />
+    <Compile Include="ComboBoxOfCheckBoxes\NativeMethods.cs" />
+    <Compile Include="ComboBoxOfCheckBoxes\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboBoxOfCheckBoxes\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxOfCheckBoxes\PopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboBoxOfCheckBoxes\PopupComboBox.Designer.cs">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxOfCheckBoxes\Selection Wrappers\ListSelectionWrapper.cs" />
+    <Compile Include="ComboBoxOfCheckBoxes\Selection Wrappers\ObjectSelectionWrapper.cs" />
+    <Compile Include="ComboBoxOfCheckBoxes\_Demo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComboBoxOfCheckBoxes\_Demo.Designer.cs">
+      <DependentUpon>_Demo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxWithToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataLinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DateTimePickerExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EnumComboBoxUnresettable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extensions\FormExtensions.cs" />
+    <Compile Include="Extensions\TreeNodeExtensions.cs" />
+    <Compile Include="Extensions\TreeViewExtensions.cs" />
+    <Compile Include="frm_promptDataGridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptDataGridView.Designer.cs">
+      <DependentUpon>frm_promptDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_imageOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_imageOrder.Designer.cs">
+      <DependentUpon>frm_imageOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptDate.Designer.cs">
+      <DependentUpon>frm_promptDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptListView.Designer.cs">
+      <DependentUpon>frm_promptListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptNoteWithHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptNoteWithHistory.Designer.cs">
+      <DependentUpon>frm_promptNoteWithHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptPhone.Designer.cs">
+      <DependentUpon>frm_promptPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptForCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptForCredentials.Designer.cs">
+      <DependentUpon>frm_promptForCredentials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_prompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_prompt.Designer.cs">
+      <DependentUpon>frm_prompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptScrollable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptScrollable.Designer.cs">
+      <DependentUpon>frm_promptScrollable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListItem.cs" />
+    <Compile Include="DataGridViewDisableCheckBox.cs" />
+    <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Extensions\DataGridViewExtensions.cs" />
+    <Compile Include="Extensions\ListViewExtensions.cs" />
+    <Compile Include="frm_promptCheckbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptCheckbox.Designer.cs">
+      <DependentUpon>frm_promptCheckbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptCopyable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptCopyable.Designer.cs">
+      <DependentUpon>frm_promptCopyable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_InfoBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_InfoBox.Designer.cs">
+      <DependentUpon>frm_InfoBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewItemByColIndex.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxManager.cs" />
+    <Compile Include="PanelWithScrollEvents.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PromptShared.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SlidingPanel.cs" />
+    <Compile Include="ListWithCustomEvents.cs" />
+    <Compile Include="ListViewOfTextBoxes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewOfTextBoxes.Designer.cs">
+      <DependentUpon>ListViewOfTextBoxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuStripExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeView.Designer.cs">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_addRemoveButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_addRemoveButtons.Designer.cs">
+      <DependentUpon>uc_addRemoveButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CollapsableGrid\DataSourceManager.cs" />
+    <Compile Include="CollapsableGrid\OutlookGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CollapsableGrid\OutlookGrid.designer.cs">
+      <DependentUpon>OutlookGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollapsableGrid\OutlookGridGroup.cs" />
+    <Compile Include="CollapsableGrid\OutlookGridRow.cs" />
+    <Compile Include="ListViewColumnSorter.cs" />
+    <Compile Include="MultiTypeListViewColumnSorter.cs" />
+    <Compile Include="ScrollEventListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollEventListView.Designer.cs">
+      <DependentUpon>ScrollEventListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewDisableButton.cs" />
+    <Compile Include="ExtendedWebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridViewPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormValidation.cs" />
+    <Compile Include="frm_promptRadio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptRadio.Designer.cs">
+      <DependentUpon>frm_promptRadio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_promptButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_promptCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataGridViewEnumComboBoxColumn.cs" />
+    <Compile Include="DataGridViewEnumComboBoxColumn.Designer.cs">
+      <DependentUpon>DataGridViewEnumComboBoxColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownTree\DropDownTreeNode.cs" />
+    <Compile Include="DropDownTree\uc_dropDownTreeNodeButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropDownTree\uc_dropDownTreeNodeButtons.Designer.cs">
+      <DependentUpon>uc_dropDownTreeNodeButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownTree\DropDownTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EnumComboBox.Designer.cs">
+      <DependentUpon>EnumComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="FunctionKeyListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uc_imageUploader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_imageUploader.Designer.cs">
+      <DependentUpon>uc_imageUploader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileDialogs.cs" />
+    <Compile Include="FilterListViewPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewItemComparer.cs" />
+    <Compile Include="QuickControl.cs" />
+    <Compile Include="uc_image.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_image.Designer.cs">
+      <DependentUpon>uc_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_SpellCheckTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_SpellCheckTextBox.Designer.cs">
+      <DependentUpon>uc_SpellCheckTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryThread.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComboBoxOfCheckBoxes\PopupComboBox.resx">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxOfCheckBoxes\_Demo.resx">
+      <DependentUpon>_Demo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptCheckbox.resx">
+      <DependentUpon>frm_promptCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptCopyable.resx">
+      <DependentUpon>frm_promptCopyable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptDataGridView.resx">
+      <DependentUpon>frm_promptDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_imageOrder.resx">
+      <DependentUpon>frm_imageOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_InfoBox.resx">
+      <DependentUpon>frm_InfoBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptDate.resx">
+      <DependentUpon>frm_promptDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptListView.resx">
+      <DependentUpon>frm_promptListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptNoteWithHistory.resx">
+      <DependentUpon>frm_promptNoteWithHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptPhone.resx">
+      <DependentUpon>frm_promptPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptForCredentials.resx">
+      <DependentUpon>frm_promptForCredentials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_prompt.resx">
+      <DependentUpon>frm_prompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptScrollable.resx">
+      <DependentUpon>frm_promptScrollable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_addRemoveButtons.resx">
+      <DependentUpon>uc_addRemoveButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxExtended.resx">
+      <DependentUpon>TextBoxExtended.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrollEventListView.resx">
+      <DependentUpon>ScrollEventListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterListViewPanel.resx">
+      <DependentUpon>FilterListViewPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptRadio.resx">
+      <DependentUpon>frm_promptRadio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptButton.resx">
+      <DependentUpon>frm_promptButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_promptCombo.resx">
+      <DependentUpon>frm_promptCombo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropDownTree\uc_dropDownTreeNodeButtons.resx">
+      <DependentUpon>uc_dropDownTreeNodeButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_imageUploader.resx">
+      <DependentUpon>uc_imageUploader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropDownListView.resx">
+      <DependentUpon>DropDownListView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_SpellCheckTextBox.resx">
+      <DependentUpon>uc_SpellCheckTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_image.resx">
+      <DependentUpon>uc_image.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{47424EC4-1DF1-43A9-BC88-E32E36C2A3FE}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WWUtilities\WWUtilities.csproj">
+      <Project>{8956C4B6-92BF-4EBE-8EC0-6CB803A2A5EC}</Project>
+      <Name>WWUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="en-US.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>
